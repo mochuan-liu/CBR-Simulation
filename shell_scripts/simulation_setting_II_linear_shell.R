@@ -14,7 +14,7 @@ for(seed in seed_list){
         ram <- 2
       }
       for(method in method_list){
-        file_name <- paste('Simulation_II_linear', method, N, seed, sep = '_')
+        file_name <- paste(paste('Simulation_II_linear', method, N, seed, sep = '_'), '.sh', sep = '')
         file_path <- file.path(working_path, '/shell_scripts/Setting_II_linear/')
         fileConn <- file(file.path(file_path, file_name))
         writeLines(c('#!/bin/bash',
